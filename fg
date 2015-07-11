@@ -1,0 +1,27 @@
+[33mcommit d6e895f29f0370e1553d982429f2490d7818a1a4[m
+Author: mosqueravillanueva <mosqueravillanueva@gmail.com>
+Date:   Sat Jul 11 11:19:18 2015 +0200
+
+    Ejercicio Obligatorio Modulo 6
+
+[1mdiff --git a/routes/index.js b/routes/index.js[m
+[1mindex 8883634..c29439b 100644[m
+[1m--- a/routes/index.js[m
+[1m+++ b/routes/index.js[m
+[36m@@ -3,6 +3,7 @@[m [mvar router = express.Router();[m
+ [m
+ var quizController = require('../controllers/quiz_controller');[m
+ [m
+[32m+[m
+ /* GET home page. */[m
+ router.get('/', function(req, res) {[m
+   res.render('index', { title: 'Quiz' });[m
+[36m@@ -11,4 +12,8 @@[m [mrouter.get('/', function(req, res) {[m
+ router.get('/quizes/question',quizController.question);[m
+ router.get('/quizes/answer',quizController.answer);[m
+ [m
+[32m+[m[32mrouter.get('/author',function(req, res) {[m
+[32m+[m[32m  res.render('author', { author: 'Víctor Mosquera' });[m
+[32m+[m[32m});[m
+[32m+[m
+ module.exports = router;[m
